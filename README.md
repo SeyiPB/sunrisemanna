@@ -1,69 +1,50 @@
-# Welcome to your Lovable project
+# Sunrise Manna - Daily Faith-Based Inspiration
 
-## Project info
+Sunrise Manna is a subscription-based daily devotional application designed to start your day spiritually charged with kingdom wisdom and biblical insights.
 
-**URL**: https://lovable.dev/projects/d1f53ce3-2efa-435a-91d5-cc7dd6195af5
+## Features
 
-## How can I edit this code?
+- **Daily Inspiration**: Spiritual content to supercharge your morning.
+- **Automated Morning Calls**: Users can subscribe to receive a daily phone call with the devotional.
+  - Flexible scheduling (12:00 AM - 11:00 AM).
+  - Timezone aware.
+- **User-Friendly Interface**: A modern, responsive web application featuring a stunning hero section and easy-to-use subscription form.
 
-There are several ways of editing your application.
+## Tech Stack
 
-**Use Lovable**
+- **Frontend**: React, TypeScript, Vite
+- **Styling**: Tailwind CSS, Shadcn UI
+- **Backend Integration**: Google Apps Script (Serverless function for handling subscriptions and data storage in Google Sheets)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/d1f53ce3-2efa-435a-91d5-cc7dd6195af5) and start prompting.
+## Getting Started
 
-Changes made via Lovable will be committed automatically to this repo.
+### Prerequisites
 
-**Use your preferred IDE**
+- Node.js & npm installed
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Installation
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+1.  Clone the repository:
+    ```bash
+    git clone https://github.com/SeyiPB/sunrisemanna.git
+    ```
+2.  Navigate to the project directory:
+    ```bash
+    cd sunrisemanna
+    ```
+3.  Install dependencies:
+    ```bash
+    npm install
+    ```
+4.  Start the development server:
+    ```bash
+    npm run dev
+    ```
 
-Follow these steps:
+## Development
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+The project uses `react-hook-form` and `zod` for robust form validation. The subscription data is sent to a deployed Google Apps Script Web App, which logs entries into a connected Google Sheet.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## License
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with .
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/d1f53ce3-2efa-435a-91d5-cc7dd6195af5) and click on Share -> Publish.
-
-## I want to use a custom domain - is that possible?
-
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+[Add License Information]
