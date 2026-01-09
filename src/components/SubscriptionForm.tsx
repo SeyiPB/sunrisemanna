@@ -49,7 +49,7 @@ export function SubscriptionForm() {
             firstName: "",
             phone: "",
             callTime: "",
-            timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+            timezone: "Eastern Time",
             consent: false,
         },
     });
@@ -132,6 +132,8 @@ export function SubscriptionForm() {
                                         <PhoneInput
                                             placeholder="Phone Number"
                                             {...field}
+                                            countries={['US', 'CA']}
+                                            addInternationalOption={false}
                                             className="flex h-10 w-full rounded-md border border-gray-800 bg-gray-900 px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-green-500 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-white [&_.PhoneInputCountrySelect]:text-black [&_.PhoneInputInput]:bg-transparent [&_.PhoneInputInput]:text-white [&_.PhoneInputInput]:outline-none"
                                             defaultCountry="US"
                                         />
@@ -153,18 +155,10 @@ export function SubscriptionForm() {
                                                 </SelectTrigger>
                                             </FormControl>
                                             <SelectContent>
-                                                <SelectItem value="12:00 AM">12:00 AM</SelectItem>
-                                                <SelectItem value="01:00 AM">1:00 AM</SelectItem>
-                                                <SelectItem value="02:00 AM">2:00 AM</SelectItem>
-                                                <SelectItem value="03:00 AM">3:00 AM</SelectItem>
                                                 <SelectItem value="04:00 AM">4:00 AM</SelectItem>
                                                 <SelectItem value="05:00 AM">5:00 AM</SelectItem>
                                                 <SelectItem value="06:00 AM">6:00 AM</SelectItem>
                                                 <SelectItem value="07:00 AM">7:00 AM</SelectItem>
-                                                <SelectItem value="08:00 AM">8:00 AM</SelectItem>
-                                                <SelectItem value="09:00 AM">9:00 AM</SelectItem>
-                                                <SelectItem value="10:00 AM">10:00 AM</SelectItem>
-                                                <SelectItem value="11:00 AM">11:00 AM</SelectItem>
                                             </SelectContent>
                                         </Select>
                                         <FormMessage />
@@ -183,9 +177,10 @@ export function SubscriptionForm() {
                                                 </SelectTrigger>
                                             </FormControl>
                                             <SelectContent>
-                                                {Intl.supportedValuesOf('timeZone').map((tz) => (
-                                                    <SelectItem key={tz} value={tz}>{tz}</SelectItem>
-                                                ))}
+                                                <SelectItem value="Eastern Time">Eastern Time (US & Canada)</SelectItem>
+                                                <SelectItem value="Central Time">Central Time (US & Canada)</SelectItem>
+                                                <SelectItem value="Mountain Time">Mountain Time (US & Canada)</SelectItem>
+                                                <SelectItem value="Pacific Time">Pacific Time (US & Canada)</SelectItem>
                                             </SelectContent>
                                         </Select>
                                         <FormMessage />
